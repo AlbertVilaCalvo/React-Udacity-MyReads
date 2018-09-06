@@ -22,10 +22,7 @@ class BooksApp extends React.Component {
   }
 
   onMyBooksShelfChange = ({ book, newShelf }) => {
-    // console.log(book);
-    // console.log(newShelf);
     BooksAPI.update(book, newShelf).then(response => {
-      // console.log(response);
       this.setState(({ books }) => {
         books[books.findIndex(b => b.id === book.id)].shelf = newShelf
         return { books }
