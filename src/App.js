@@ -17,7 +17,7 @@ class BooksApp extends React.Component {
     });
   }
 
-  onShelfChange = ({ book, newShelf }) => {
+  onMyBooksShelfChange = ({ book, newShelf }) => {
     // console.log(book);
     // console.log(newShelf);
     BooksAPI.update(book, newShelf).then(response => {
