@@ -18,7 +18,7 @@ class SearchBooks extends Component {
       return;
     }
 
-    BooksAPI.search(query).then(books => {
+    BooksAPI.search(query.trim()).then(books => {
       // console.log('search response', books);
       // If the user deletes the query and there is a search request 'in flight' we can end up with an empty query
       // but showing results. Or we can show results of a different query. To prevent this just check the current
