@@ -15,12 +15,12 @@ class MyBooks extends Component {
               title='Currently Reading'
               books={this.props.books.filter(book => book.shelf === 'currentlyReading')}
               onShelfChange={this.props.onShelfChange}
-              />
+            />
             <BookShelf
               title='Want to Read'
               books={this.props.books.filter(book => book.shelf === 'wantToRead')}
               onShelfChange={this.props.onShelfChange}
-              />
+            />
             <BookShelf
               title='Read'
               books={this.props.books.filter(book => book.shelf === 'read')}

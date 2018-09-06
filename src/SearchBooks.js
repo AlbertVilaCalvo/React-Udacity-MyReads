@@ -40,7 +40,7 @@ class SearchBooks extends Component {
     const booksWithCorrectShelf = this.state.books.map(book => {
       const index = mybooks.findIndex(b => b.id === book.id);
       if (index === -1) {
-        // book not in mybooks
+        // search book not in mybooks
         book.shelf = 'none';
       } else {
         book.shelf = mybooks[index].shelf;
