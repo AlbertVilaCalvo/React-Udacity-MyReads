@@ -11,9 +11,21 @@ class MyBooks extends Component {
         </div>
         <div className="list-books-content">
           <div>
-            <BookShelf title='Currently Reading' books={this.props.books.filter(book => book.shelf === 'currentlyReading')} />
-            <BookShelf title='Want to Read' books={this.props.books.filter(book => book.shelf === 'wantToRead')} />
-            <BookShelf title='Read' books={this.props.books.filter(book => book.shelf === 'read')} />
+            <BookShelf
+              title='Currently Reading'
+              books={this.props.books.filter(book => book.shelf === 'currentlyReading')}
+              onShelfChange={this.props.onShelfChange}
+              />
+            <BookShelf
+              title='Want to Read'
+              books={this.props.books.filter(book => book.shelf === 'wantToRead')}
+              onShelfChange={this.props.onShelfChange}
+              />
+            <BookShelf
+              title='Read'
+              books={this.props.books.filter(book => book.shelf === 'read')}
+              onShelfChange={this.props.onShelfChange}
+            />
 
             <div className="bookshelf">
               <h2 className="bookshelf-title">Read</h2>
