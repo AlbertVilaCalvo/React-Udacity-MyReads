@@ -36,6 +36,15 @@ class SearchBooks extends Component {
   }
 
   render() {
+    const mybooks = this.props.mybooks;
+    const booksWithCorrectShelf = this.state.books.map(book => {
+      const index = mybooks.findIndex(b => b.id === book.id);
+      if (index !== -1) {
+        book.shelf = mybooks[index].shelf;
+      }
+      return book;
+    })
+
     return (
       <div className="search-books">
         <div className="search-books-bar">
@@ -59,7 +68,7 @@ class SearchBooks extends Component {
         </div>
         <div className="search-books-results">
           <ol className="books-grid">
-            {this.state.books.map(book =>
+            {booksWithCorrectShelf.map(book =>
               <li key={book.id}>
                 <Book book={book} onShelfChange={this.props.onShelfChange} />
               </li>
