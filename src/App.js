@@ -11,6 +11,10 @@ class BooksApp extends React.Component {
   }
 
   componentDidMount() {
+    this.loadMyBooks();
+  }
+
+  loadMyBooks = () => {
     BooksAPI.getAll().then(books => {
       console.log(books);
       this.setState({ books });
@@ -31,11 +35,7 @@ class BooksApp extends React.Component {
 
   onSearchBooksShelfChange = ({ book, newShelf }) => {
     BooksAPI.update(book, newShelf).then(response => {
-      // console.log(response);
-      BooksAPI.getAll().then(books => {
-        // console.log(books);
-        this.setState({ books });
-      });
+      this.loadMyBooks();
     });
   }
 
