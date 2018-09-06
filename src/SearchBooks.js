@@ -39,7 +39,10 @@ class SearchBooks extends Component {
     const mybooks = this.props.mybooks;
     const booksWithCorrectShelf = this.state.books.map(book => {
       const index = mybooks.findIndex(b => b.id === book.id);
-      if (index !== -1) {
+      if (index === -1) {
+        // book not in mybooks
+        book.shelf = 'none';
+      } else {
         book.shelf = mybooks[index].shelf;
       }
       return book;
