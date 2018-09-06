@@ -12,25 +12,27 @@ class SearchBooks extends Component {
   updateQuery = (query) => {
     // console.log('query: ' + query);
     this.setState({ query });
-    if (query) {
-      BooksAPI.search(query).then(books => {
-        // console.log('search response', books);
-        // If the user deletes the query and there is a search request 'in flight' we can end up with an empty query
-        // but showing results. Or we can show results of a different query. To prevent this just check the current
-        // query before showing the results.
-        if (this.state.query !== query) {
-          return;
-        }
-        if (Array.isArray(books)) {
-          this.setState({ books });
-        } else {
-          // API returned {error: "empty query", items: []}
-          this.setState({ books: [] });
-        }
-      });
-    } else {
+
+    if (!query) { // empty string
       this.setState({ books: [] });
+      return;
     }
+
+    BooksAPI.search(query).then(books => {
+      // console.log('search response', books);
+      // If the user deletes the query and there is a search request 'in flight' we can end up with an empty query
+      // but showing results. Or we can show results of a different query. To prevent this just check the current
+      // query before showing the results.
+      if (this.state.query !== query) {
+        return;
+      }
+      if (Array.isArray(books)) {
+        this.setState({ books });
+      } else {
+        // API returned {error: "empty query", items: []}
+        this.setState({ books: [] });
+      }
+    });
   }
 
   render() {
