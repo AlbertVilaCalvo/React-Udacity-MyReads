@@ -8,12 +8,11 @@ class BookShelf extends Component {
       <h2 className="bookshelf-title">{this.props.title}</h2>
       <div className="bookshelf-books">
         <ol className="books-grid">
-          <li>
-            <Book
-              title="To Kill a Mockingbird"
-              authors="Harper Lee"
-            />
-          </li>
+          {this.props.books.map(book =>
+            <li key={book.id}>
+              <Book book={book} />
+            </li>
+          )}
           <li>
             <div className="book">
               <div className="book-top">
