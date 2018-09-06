@@ -17,17 +17,15 @@ class BooksApp extends React.Component {
     });
   }
 
-  onShelfChange = ({book, newShelf}) => {
-    console.log(book);
-    console.log(newShelf);
-    let currentBooks = this.state.books;
+  onShelfChange = ({ book, newShelf }) => {
+    // console.log(book);
+    // console.log(newShelf);
     BooksAPI.update(book, newShelf).then(response => {
-      console.log(response);
-      const updatedBook = currentBooks.find(b => b.id === book.id);
-      updatedBook.shelf = newShelf;
-      const updatedBookIndex = currentBooks.indexOf(updatedBook);
-      const updatedBooks = currentBooks.fill(updatedBook, updatedBookIndex, updatedBookIndex + 1);
-      this.setState({ books: updatedBooks });
+      // console.log(response);
+      this.setState(({ books }) => {
+        books[books.findIndex(b => b.id === book.id)].shelf = newShelf
+        return { books }
+      });
     });
   }
 
