@@ -7,7 +7,7 @@ import MyBooks from './MyBooks';
 
 class BooksApp extends React.Component {
   state = {
-    books: []
+    books: [] // my books
   }
 
   componentDidMount() {
