@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const Book = (props) => {
   const onShelfChange = (event) => {
     props.onShelfChange({ book: props.book, newShelf: event.target.value });
-  }
+  };
 
   return (
     <div className="book">
@@ -23,7 +23,7 @@ const Book = (props) => {
       <div className="book-title">{props.book.title}</div>
       <div className="book-authors">{props.book.authors ? props.book.authors.join(', ') : ''}</div>
     </div>
-  )
-}
+  );
+};
 
 export default Book;
