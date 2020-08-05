@@ -23,5 +23,10 @@ https://github.com/udacity/reactnd-project-myreads-starter/
 
 # Screenshots
 
+**Home page:**
+
 <img src='screenshots/home.png' width='340px' style="margin-right: 40px;">
+
+**Search page:**
+
 <img src='screenshots/search.png' width='340px' style="margin-right: 40px;">
