@@ -20,3 +20,8 @@ Happy reading!
 # Starter code
 
 https://github.com/udacity/reactnd-project-myreads-starter/
+
+# Screenshots
+
+<img src='screenshots/home.png' width='340px' style="margin-right: 40px;">
+<img src='screenshots/search.png' width='340px' style="margin-right: 40px;">
