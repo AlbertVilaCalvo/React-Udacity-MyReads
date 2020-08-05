@@ -16,3 +16,7 @@ To develop the project:
 This will open a browser tab in which you can use the app.
 
 Happy reading!
+
+# Starter code
+
+https://github.com/udacity/reactnd-project-myreads-starter/
