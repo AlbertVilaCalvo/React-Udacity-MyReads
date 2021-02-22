@@ -85,7 +85,7 @@ class SearchBooks extends Component {
 }
 
 SearchBooks.propTypes = {
-  books: PropTypes.array.isRequired,
+  mybooks: PropTypes.array.isRequired,
   onShelfChange: PropTypes.func.isRequired
 };
 
