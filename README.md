@@ -1,12 +1,14 @@
 # The BookShelf app
 
-The bookshelf app that allows you to select and categorize books you have read, are currently reading, or want to read.
+A React project of the [Udacity Front End Web Developer Nanodegree](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011).
+
+The bookshelf app allows you to select and categorize books you have read, are currently reading, or want to read.
 
 The main page displays a list of "shelves". Each book has a control that lets you select the shelf for that book.
 
 There is also a search page that allows you to find books to add to your library.
 
-# Setup
+## Setup
 
 To develop the project:
 
@@ -17,11 +19,11 @@ This will open a browser tab in which you can use the app.
 
 Happy reading!
 
-# Starter code
+## Starter code
 
 https://github.com/udacity/reactnd-project-myreads-starter/
 
-# Screenshots
+## Screenshots
 
 ***Home page:***
 
